@@ -1,0 +1,375 @@
+[
+  {
+    "pregunta": "¿Qué tipo de dato espacial se utiliza para representar un recorrido o trayecto como una calle o una ruta?",
+    "opciones": ["Punto", "Línea", "Polígono", "Coordenada"],
+    "respuestaCorrecta": 1
+  },
+  {
+    "pregunta": "Verdadero o Falso: Los datos tipo 'punto, línea y polígono' permiten representar objetos geográficos como casas, calles o zonas sobre un mapa.",
+    "opciones": ["Verdadero", "Falso"],
+    "respuestaCorrecta": 0
+  },
+  {
+    "pregunta": "¿Cuál de las siguientes aplicaciones probablemente NO usa una base de datos geográfica?",
+    "opciones": ["Uber", "Google Maps", "WhatsApp", "Pokémon GO"],
+    "respuestaCorrecta": 2
+  },
+  {
+    "pregunta": "¿Cuál fue el principal factor que impulsó la aparición de las bases de datos NoSQL?",
+    "opciones": [
+      "La necesidad de reemplazar completamente las bases de datos SQL",
+      "El crecimiento exponencial de datos con la llegada de la web 2.0 y aplicaciones como Facebook, Twitter y YouTube",
+      "La obsolescencia de las bases de datos relacionales",
+      "La reducción de costos en el almacenamiento de datos"
+    ],
+    "respuestaCorrecta": 1
+  },
+  {
+    "pregunta": "¿Cuáles son los principales formatos de almacenamiento que utilizan las bases de datos NoSQL?",
+    "opciones": [
+      "Únicamente tablas relacionales",
+      "Solo documentos JSON",
+      "Clave-valor, mapeo de columnas, documentos y grafos",
+      "Exclusivamente archivos de texto plano"
+    ],
+    "respuestaCorrecta": 2
+  },
+  {
+    "pregunta": "¿Cuál de las siguientes es una desventaja de las bases de datos NoSQL?",
+    "opciones": [
+      "No pueden manejar grandes volúmenes de datos",
+      "La consistencia eventual puede causar problemas en aplicaciones que requieren integridad inmediata de datos",
+      "No permiten escalabilidad horizontal",
+      "Requieren obligatoriamente una estructura rígida predefinida"
+    ],
+    "respuestaCorrecta": 1
+  },
+  {
+    "pregunta": "¿Qué característica destaca a las Bases de Datos Orientadas a Objetos (BDOO)?",
+    "opciones": [
+      "Requieren transformar los objetos a tablas relacionales",
+      "Separan el modelo conceptual de la programación",
+      "Permiten usar el mismo modelo de clases en todas las etapas del desarrollo",
+      "Solo funcionan con lenguajes funcionales"
+    ],
+    "respuestaCorrecta": 2
+  },
+  {
+    "pregunta": "¿Qué ventaja ofrecen las BDOO respecto al rendimiento?",
+    "opciones": [
+      "Son más lentas pero más seguras que las bases relacionales",
+      "Mejoran el rendimiento en estructuras de datos complejas",
+      "Solo funcionan con bases de datos pequeñas",
+      "Dependen de motores relacionales para procesar consultas"
+    ],
+    "respuestaCorrecta": 1
+  },
+  {
+    "pregunta": "¿Qué problema ocurre cuando una transacción lee un dato, lo vuelve a leer y obtiene un valor distinto?",
+    "opciones": [
+      "Lectura sucia (Dirty Read)",
+      "Lectura no repetible (Non-repeatable Read)",
+      "Fantasmas (Phantom Reads)",
+      "Interbloqueo (Deadlock)"
+    ],
+    "respuestaCorrecta": 1
+  },
+  {
+    "pregunta": "¿Qué técnica asigna orden cronológico a las transacciones en caso de conflicto?",
+    "opciones": ["Bloqueo", "Control de versiones", "Estampado de tiempo", "Validación de transacciones"],
+    "respuestaCorrecta": 2
+  },
+  {
+    "pregunta": "¿Cuál afirmación sobre granularidad de bloqueos es correcta?",
+    "opciones": [
+      "Bloquear una tabla completa permite la mayor concurrencia",
+      "Bloquear una fila es simple de implementar pero reduce la concurrencia",
+      "Bloquear una página es un punto intermedio entre bloquear una fila y una tabla"
+    ],
+    "respuestaCorrecta": 2
+  },
+  {
+    "pregunta": "¿Qué nivel de aislamiento simula ejecución en serie de transacciones?",
+    "opciones": ["Read Uncommitted", "Read Committed", "Repeatable Read", "Serializable"],
+    "respuestaCorrecta": 3
+  },
+  {
+    "pregunta": "¿Cuándo se usa control de concurrencia optimista?",
+    "opciones": [
+      "Con alta contención de datos",
+      "Con baja contención de datos",
+      "Donde siempre se bloquea al leer",
+      "Cuando no se permiten reversiones"
+    ],
+    "respuestaCorrecta": 1
+  },
+  {
+    "pregunta": "Una 'Lectura Fantasma' ocurre cuando una transacción lee datos no confirmados.",
+    "opciones": ["Verdadero", "Falso"],
+    "respuestaCorrecta": 1
+  },
+  {
+    "pregunta": "Un bloqueo exclusivo impide lectura y escritura de otras transacciones.",
+    "opciones": ["Verdadero", "Falso"],
+    "respuestaCorrecta": 0
+  },
+  {
+    "pregunta": "Read Committed evita lecturas sucias, no repetibles y fantasmas.",
+    "opciones": ["Verdadero", "Falso"],
+    "respuestaCorrecta": 1
+  },
+  {
+    "pregunta": "El control de concurrencia pesimista usa bloqueos para evitar conflictos.",
+    "opciones": ["Verdadero", "Falso"],
+    "respuestaCorrecta": 0
+  },
+  {
+    "pregunta": "La concurrencia mal gestionada puede afectar la integridad.",
+    "opciones": ["Verdadero", "Falso"],
+    "respuestaCorrecta": 0
+  },
+  {
+    "pregunta": "La seguridad lógica solo protege el hardware.",
+    "opciones": ["Verdadero", "Falso"],
+    "respuestaCorrecta": 1
+  },
+  {
+    "pregunta": "¿Qué elemento forma parte del ciclo de seguridad lógica?",
+    "opciones": ["Respaldar", "Compartir", "Autorizar", "Encriptar"],
+    "respuestaCorrecta": 2
+  },
+  {
+    "pregunta": "¿Qué es un factor de autenticación 'algo que tenés'?",
+    "opciones": ["Contraseña", "Pregunta secreta", "Huella digital", "Token físico o app"],
+    "respuestaCorrecta": 3
+  },
+  {
+    "pregunta": "Una contraseña segura incluye símbolo, número y mayúscula.",
+    "opciones": ["Verdadero", "Falso"],
+    "respuestaCorrecta": 0
+  },
+  {
+    "pregunta": "Diferencia entre REVOKE y DENY en SQL Server:",
+    "opciones": [
+      "REVOKE otorga permisos, DENY los elimina",
+      "REVOKE elimina permisos, pero puede heredarse; DENY los bloquea totalmente",
+      "DENY es más débil que REVOKE",
+      "REVOKE elimina permisos, DENY los bloquea"
+    ],
+    "respuestaCorrecta": 1
+  },
+  {
+    "pregunta": "¿Qué permiso permite crear nuevos registros?",
+    "opciones": ["Leer", "Dar de alta", "Dar de baja", "Ejecutar"],
+    "respuestaCorrecta": 1
+  },
+  {
+    "pregunta": "Un mismo usuario puede tener permisos distintos según el dispositivo.",
+    "opciones": ["Verdadero", "Falso"],
+    "respuestaCorrecta": 0
+  },
+  {
+    "pregunta": "¿Cuál es una función fija en SQL Server?",
+    "opciones": ["serveradmin", "sysadmin", "db_datareader", "securityadmin"],
+    "respuestaCorrecta": 2
+  },
+  {
+    "pregunta": "Las auditorías ayudan a detectar accesos indebidos.",
+    "opciones": ["Verdadero", "Falso"],
+    "respuestaCorrecta": 0
+  },
+  {
+    "pregunta": "¿Qué representa un riesgo interno?",
+    "opciones": ["Hackers externos", "Competidores", "Proveedores no confiables", "Empleados que no fueron dados de baja"],
+    "respuestaCorrecta": 3
+  },
+  {
+    "pregunta": "El backup incremental copia todos los datos aunque no hayan cambiado.",
+    "opciones": ["Verdadero", "Falso"],
+    "respuestaCorrecta": 1
+  },
+  {
+    "pregunta": "¿Cuál es el propósito principal del backup?",
+    "opciones": [
+      "Acelerar consultas",
+      "Reducir tamaño",
+      "Recuperar datos ante pérdidas",
+      "Optimizar índices"
+    ],
+    "respuestaCorrecta": 2
+  },
+  {
+    "pregunta": "¿Qué herramienta se usa en PostgreSQL para backup lógico?",
+    "opciones": ["RMAN", "pg_dump", "mysqldump", "flashback"],
+    "respuestaCorrecta": 1
+  },
+  {
+    "pregunta": "El backup en caliente permite copiar sin detener el sistema.",
+    "opciones": ["Verdadero", "Falso"],
+    "respuestaCorrecta": 0
+  },
+    {
+    "pregunta": "¿Cuál es el tipo de backup más rápido para restaurar?",
+    "opciones": ["Incremental", "Diferencial", "Completo", "En caliente"],
+    "respuestaCorrecta": 2
+  },
+  {
+    "pregunta": "¿Qué estrategia implica 3 copias en 2 medios y 1 externa?",
+    "opciones": ["Backup escalonado", "Esquema 2-2-2", "Política RPO", "Estrategia 3-2-1"],
+    "respuestaCorrecta": 3
+  },
+  {
+    "pregunta": "¿Qué tipo de backup requiere detener la base?",
+    "opciones": ["Hot backup", "Cold backup", "Backup incremental", "Backup lógico"],
+    "respuestaCorrecta": 1
+  },
+  {
+    "pregunta": "Las copias deben guardarse solo en el servidor local.",
+    "opciones": ["Verdadero", "Falso"],
+    "respuestaCorrecta": 1
+  },
+  {
+    "pregunta": "¿Qué herramienta se usa para backup en SQL Server?",
+    "opciones": ["pg_dump", "mysqlhotcopy", "BACKUP DATABASE", "rman"],
+    "respuestaCorrecta": 2
+  },
+  {
+    "pregunta": "¿Cuál es una buena práctica al implementar backups?",
+    "opciones": [
+      "Guardar solo una copia local",
+      "Usar una contraseña genérica",
+      "Realizar pruebas periódicas de restauración",
+      "Omitir validaciones para ahorrar tiempo"
+    ],
+    "respuestaCorrecta": 2
+  },
+  {
+    "pregunta": "¿Qué comando marca el inicio de una transacción en SQL?",
+    "opciones": ["Init", "Commit", "Begin", "Start"],
+    "respuestaCorrecta": 2
+  },
+  {
+    "pregunta": "¿Cuál es el objetivo principal del control de transacciones?",
+    "opciones": [
+      "Acelerar el acceso a los datos",
+      "Impedir el acceso concurrente",
+      "Garantizar que los lotes de operaciones se ejecuten completamente o no se ejecuten",
+      "Crear múltiples bases de datos"
+    ],
+    "respuestaCorrecta": 2
+  },
+  {
+    "pregunta": "¿Cuál de las siguientes situaciones puede causar un fallo en una transacción?",
+    "opciones": [
+      "División por cero",
+      "Error lógico de programación",
+      "Dato no encontrado",
+      "Todas las anteriores"
+    ],
+    "respuestaCorrecta": 3
+  },
+  {
+    "pregunta": "¿Qué propiedad de las transacciones asegura que los cambios sean permanentes incluso ante fallos?",
+    "opciones": ["Atomicidad", "Coherencia", "Durabilidad", "Scrum"],
+    "respuestaCorrecta": 2
+  },
+  {
+    "pregunta": "Un fallo del disco es fácil de recuperar.",
+    "opciones": ["Verdadero", "Falso"],
+    "respuestaCorrecta": 1
+  },
+  {
+    "pregunta": "Si una operación dentro de una transacción falla, el sistema puede permitir que el resto se complete.",
+    "opciones": ["Verdadero", "Falso"],
+    "respuestaCorrecta": 1
+  },
+  {
+    "pregunta": "Los comandos COMMIT y ROLLBACK se usan para confirmar o revertir transacciones.",
+    "opciones": ["Verdadero", "Falso"],
+    "respuestaCorrecta": 0
+  },
+  {
+    "pregunta": "¿Por qué se necesita la recuperación en una base de datos con transacciones?",
+    "opciones": [
+      "Para eliminar datos antiguos que no necesitemos",
+      "Para optimizar el rendimiento",
+      "Para asegurar la coherencia e integridad ante fallas",
+      "Para permitir consultas simultáneas"
+    ],
+    "respuestaCorrecta": 2
+  },
+  {
+    "pregunta": "En alta concurrencia, la consistencia puede relajarse intencionalmente.",
+    "opciones": ["Verdadero", "Falso"],
+    "respuestaCorrecta": 1
+  },
+  {
+    "pregunta": "Las transacciones SQL permiten que solo una operación se ejecute a la vez.",
+    "opciones": ["Verdadero", "Falso"],
+    "respuestaCorrecta": 1
+  },
+  {
+    "pregunta": "¿Qué significa BI en el mundo empresarial?",
+    "opciones": ["Business Interface", "Business Intelligence", "Business Integration"],
+    "respuestaCorrecta": 1
+  },
+  {
+    "pregunta": "¿Cuál es el objetivo principal de la BI?",
+    "opciones": [
+      "Aumentar la publicidad",
+      "Automatizar tareas sin análisis",
+      "Tomar decisiones basadas en datos"
+    ],
+    "respuestaCorrecta": 2
+  },
+  {
+    "pregunta": "¿Cuál herramienta es desarrollada por Microsoft?",
+    "opciones": ["Tableau", "Power BI", "Qlik Sense"],
+    "respuestaCorrecta": 1
+  },
+  {
+    "pregunta": "¿Qué caracteriza a una herramienta de BI?",
+    "opciones": [
+      "Enviar correos masivos",
+      "Generar gráficos y reportes basados en datos",
+      "Crear páginas web"
+    ],
+    "respuestaCorrecta": 1
+  },
+  {
+    "pregunta": "¿Qué ventaja da la BI al marketing?",
+    "opciones": [
+      "Ocultar errores",
+      "Aumentar ventas analizando comportamiento del cliente",
+      "Evitar promociones"
+    ],
+    "respuestaCorrecta": 1
+  },
+  {
+    "pregunta": "¿Qué tipo de decisiones permite la BI?",
+    "opciones": [
+      "Basadas en suposiciones",
+      "Informadas y estratégicas",
+      "Emocionales"
+    ],
+    "respuestaCorrecta": 1
+  },
+  {
+    "pregunta": "¿Qué ventaja ofrece Tableau en visualización?",
+    "opciones": [
+      "Gráficos complejos e interactivos",
+      "Solo tablas planas",
+      "Solo blanco y negro"
+    ],
+    "respuestaCorrecta": 0
+  },
+  {
+    "pregunta": "¿Qué riesgo implica un BI mal implementado?",
+    "opciones": [
+      "Mejora excesiva",
+      "Aumento automático de ventas",
+      "Resultados incorrectos o confusos"
+    ],
+    "respuestaCorrecta": 2
+  }
+]
