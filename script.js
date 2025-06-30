@@ -21,9 +21,10 @@ function mostrarPreguntas() {
     `).join("");
 
     quizDiv.innerHTML += `
-      <div id="pregunta${i}">
+      <div id="pregunta${i}" class="pregunta">
         <strong>${i + 1}. ${p.pregunta}</strong><br/>
         ${opcionesHTML}
+        <div class="feedback-container"></div>
         <hr/>
       </div>
     `;
@@ -45,25 +46,29 @@ function evaluar() {
     });
 
     const contenedorPregunta = document.getElementById(`pregunta${i}`);
+    const feedbackDiv = contenedorPregunta.querySelector(".feedback-container");
 
-    // Eliminar cualquier mensaje previo
-    const feedbackExistente = contenedorPregunta.querySelector(".feedback");
-    if (feedbackExistente) feedbackExistente.remove();
-
-    // Limpiar estilos
+    // Limpiar feedback y clases anteriores
+    feedbackDiv.innerHTML = "";
     contenedorPregunta.classList.remove("correcta", "incorrecta");
 
-    // Mostrar evaluación
+    // Evaluar selección
     if (seleccion === p.respuestaCorrecta) {
       correctas++;
       contenedorPregunta.classList.add("correcta");
-      contenedorPregunta.innerHTML += `<p class="feedback" style="color:green;"><strong>✅ ¡Correcto!</strong></p>`;
+      feedbackDiv.innerHTML = `<p style="color:green;"><strong>✅ ¡Correcto!</strong></p>`;
     } else {
       contenedorPregunta.classList.add("incorrecta");
       const respuestaCorrecta = p.opciones[p.respuestaCorrecta];
-      contenedorPregunta.innerHTML += `<p class="feedback" style="color:red;"><strong>❌ Incorrecto.</strong> La correcta era: <em>${respuestaCorrecta}</em></p>`;
+      feedbackDiv.innerHTML = `<p style="color:red;"><strong>❌ Incorrecto.</strong> La correcta era: <em>${respuestaCorrecta}</em></p>`;
     }
   });
 
   resultadoDiv.innerHTML = `<h3>Obtuviste ${correctas} de ${preguntasSeleccionadas.length} correctas.</h3>`;
+}
+
+function iniciarSimulador() {
+  preguntasSeleccionadas = seleccionarPreguntasAleatorias(10);
+  mostrarPreguntas();
+  document.getElementById("resultado").innerHTML = "";
 }
