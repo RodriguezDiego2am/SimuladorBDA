@@ -21,10 +21,9 @@ function mostrarPreguntas() {
     `).join("");
 
     quizDiv.innerHTML += `
-      <div>
+      <div class="question-box">
         <strong>${i + 1}. ${p.pregunta}</strong><br/>
         ${opcionesHTML}
-        <hr/>
       </div>
     `;
   });
