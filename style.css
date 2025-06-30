@@ -53,3 +53,15 @@ button:hover {
   font-size: 1.2rem;
   margin-top: 1rem;
 }
+
+.correcta {
+  border: 2px solid green;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.incorrecta {
+  border: 2px solid red;
+  padding: 10px;
+  border-radius: 8px;
+}
