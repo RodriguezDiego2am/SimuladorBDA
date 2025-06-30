@@ -21,9 +21,10 @@ function mostrarPreguntas() {
     `).join("");
 
     quizDiv.innerHTML += `
-      <div class="question-box">
+      <div id="pregunta${i}">
         <strong>${i + 1}. ${p.pregunta}</strong><br/>
         ${opcionesHTML}
+        <hr/>
       </div>
     `;
   });
@@ -31,7 +32,6 @@ function mostrarPreguntas() {
 
 function evaluar() {
   let correctas = 0;
-  const quizDiv = document.getElementById("quiz");
   const resultadoDiv = document.getElementById("resultado");
   resultadoDiv.innerHTML = "";
 
@@ -44,20 +44,24 @@ function evaluar() {
       }
     });
 
-    const contenedorPregunta = quizDiv.children[i];
+    const contenedorPregunta = document.getElementById(`pregunta${i}`);
 
-    // Eliminar estilos anteriores
+    // Eliminar cualquier mensaje previo
+    const feedbackExistente = contenedorPregunta.querySelector(".feedback");
+    if (feedbackExistente) feedbackExistente.remove();
+
+    // Limpiar estilos
     contenedorPregunta.classList.remove("correcta", "incorrecta");
 
-    // Mostrar feedback visual y texto
+    // Mostrar evaluación
     if (seleccion === p.respuestaCorrecta) {
       correctas++;
       contenedorPregunta.classList.add("correcta");
-      contenedorPregunta.innerHTML += `<p style="color:green;"><strong>✅ ¡Correcto!</strong></p>`;
+      contenedorPregunta.innerHTML += `<p class="feedback" style="color:green;"><strong>✅ ¡Correcto!</strong></p>`;
     } else {
       contenedorPregunta.classList.add("incorrecta");
       const respuestaCorrecta = p.opciones[p.respuestaCorrecta];
-      contenedorPregunta.innerHTML += `<p style="color:red;"><strong>❌ Incorrecto.</strong> La correcta era: <em>${respuestaCorrecta}</em></p>`;
+      contenedorPregunta.innerHTML += `<p class="feedback" style="color:red;"><strong>❌ Incorrecto.</strong> La correcta era: <em>${respuestaCorrecta}</em></p>`;
     }
   });
 
